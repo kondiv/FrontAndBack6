@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система аутентификации</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">Сменить тему</button>
+    </div>
+    
+    <div class="forms">
+      <div class="form-container" id="loginForm">
+        <h2>Вход</h2>
+        <input type="text" id="loginUsername" placeholder="Логин">
+        <input type="password" id="loginPassword" placeholder="Пароль">
+        <button onclick="login()">Войти</button>
+        <p>Нет аккаунта? <a href="#" onclick="showRegister()">Зарегистрироваться</a></p>
+      </div>
+
+      <div class="form-container" id="registerForm" style="display: none;">
+        <h2>Регистрация</h2>
+        <input type="text" id="registerUsername" placeholder="Логин">
+        <input type="password" id="registerPassword" placeholder="Пароль">
+        <button onclick="register()">Создать аккаунт</button>
+        <p>Уже есть аккаунт? <a href="#" onclick="showLogin()">Войти здесь</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
